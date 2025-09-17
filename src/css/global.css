@@ -1,0 +1,45 @@
+/* -------------------------- */
+/* Light Mode (Default) */
+/* -------------------------- */
+:root {
+  /* Ana Renkler / Branding */
+  --color-primary-dark: #226ba3; /* Başlıklar, butonlar, ikonlar */
+  --color-primary-light: #627e75; /* Kart arkaplanları, secondary header */
+
+  /* Accent / Vurgu */
+  --color-accent-yellow: #e9c429; /* Highlight, hover, ikonlar */
+  --color-accent-beige: #d2a985; /* Secondary hover, kart hover */
+  --color-accent-red: #913639; /* Hata mesajları, kritik uyarılar */
+
+  /* Metin Renkleri */
+  --text-primary: #1f1f1f; /* Ana metin: Koyu, yüksek kontrast */
+  --text-secondary: #4a4a4a; /* Açıklama veya alt metinler */
+  --text-muted: #7a7a7a; /* Footer veya küçük notlar */
+
+  /* Arka Plan Renkleri */
+  --bg-light: #f5f5f5; /* Genel sayfa arkaplanı */
+  --bg-card: #627e75; /* Kart veya layer arkaplanı, soft ton */
+}
+
+/* -------------------------- */
+/* Dark Mode */
+/* -------------------------- */
+:root[data-theme="dark"] {
+  /* Ana Renkler / Branding */
+  --color-primary-dark: #4a90e2; /* Canlı mavi: Başlıklar, ikonlar */
+  --color-primary-light: #226ba3; /* Kart arkaplanları, secondary layer */
+
+  /* Accent / Vurgu */
+  --color-accent-yellow: #f1c40f; /* Highlight, hover, ikonlar */
+  --color-accent-beige: #d2a985; /* Secondary hover, kart hover */
+  --color-accent-red: #e74c3c; /* Hata mesajları, kritik uyarılar */
+
+  /* Metin Renkleri */
+  --text-primary: #ffffff; /* Ana metin: Beyaz, yüksek kontrast */
+  --text-secondary: #dcdcdc; /* Secondary metin: Açıklama, alt metin */
+  --text-muted: #a0a0a0; /* Footer veya küçük notlar */
+
+  /* Arka Plan Renkleri */
+  --bg-light: #1f1f1f; /* Genel dark arkaplan */
+  --bg-card: #627e75; /* Kart arkaplanı: Dark tonlarda soft layer */
+}
