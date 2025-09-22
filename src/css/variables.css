@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/* -------------------------- */
+/* Light Mode (Default) */
+/* -------------------------- */
+:root {
+  --font-family: "Nunito Sans", sans-serif;
+  /* Branding */
+  --color-primary-dark: #226ba3;
+  --color-primary-light: #627e75;
+
+  /* Accents */
+  --color-accent-yellow: #e9c429;
+  --color-accent-beige: #d2a985;
+  --color-accent-red: #913639;
+
+  /* Text */
+  --text-primary: #1f1f1f;
+  --text-secondary: #4a4a4a;
+  --text-muted: #7a7a7a;
+
+  /* Backgrounds */
+  --bg-light: #f5f5f5;
+  --bg-card: #627e75;
+
+  /* Glass + Elevation */
+  --glass-bg: rgba(255, 255, 255, 0.28);
+  --glass-bg-strong: rgba(255, 255, 255, 0.42);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-blur: 12px;
+  --radius-card: 20px;
+  --radius-pill: 999px;
+  --shadow-lg: 0 20px 40px rgba(0,0,0,0.25);
+  --shadow-md: 0 12px 24px rgba(0,0,0,0.18);
+  --shadow-sm: 0 6px 12px rgba(0,0,0,0.12);
+
+  /* Buttons */
+  --btn-bg: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.75) 100%);
+  --btn-border: rgba(0,0,0,0.08);
+  --btn-text: #1f1f1f;
+  --btn-hover-shadow: 0 10px 18px rgba(0,0,0,0.12);
+
+  /* Toggles */
+  --toggle-track-bg: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.82) 100%);
+  --toggle-track-light: linear-gradient(180deg, #fff7cc 0%, #ffe38a 100%);
+  --toggle-track-dark: linear-gradient(180deg, rgba(86,106,160,0.45) 0%, rgba(52,64,120,0.38) 100%);
+  --toggle-track-border: rgba(0,0,0,0.08);
+  --toggle-knob-bg: #ffffff;
+
+  /* Iconography */
+  --icon-filter: drop-shadow(0 1px 1.5px rgba(0,0,0,.18));
+  --icon-color: #222;
+  --icon-muted: #666;
+  --icon-sun-active: #f1c40f;
+  --icon-moon-active: #6f8cff;
+  --icon-inactive-opacity: .55;
+
+  /* Unit switch accents */
+  --unit-c-active: #2d9cff;
+  --unit-f-active: #ff6b6b;
+}
+
+/* -------------------------- */
+/* Dark Mode */
+/* -------------------------- */
+:root[data-theme="dark"] {
+  --color-primary-dark: #4a90e2;
+  --color-primary-light: #226ba3;
+
+  --color-accent-yellow: #f1c40f;
+  --color-accent-beige: #d2a985;
+  --color-accent-red: #e74c3c;
+
+  --text-primary: #ffffff;
+  --text-secondary: #dcdcdc;
+  --text-muted: #a0a0a0;
+
+  --bg-light: #121418;
+  --bg-card: #627e75;
+
+  --glass-bg: rgba(0, 0, 0, 0.32);
+  --glass-bg-strong: rgba(0, 0, 0, 0.48);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --glass-blur: 14px;
+  --radius-card: 20px;
+  --radius-pill: 999px;
+  --shadow-lg: 0 24px 48px rgba(0,0,0,0.45);
+  --shadow-md: 0 14px 28px rgba(0,0,0,0.35);
+  --shadow-sm: 0 8px 16px rgba(0,0,0,0.25);
+
+  /* Buttons */
+  --btn-bg: linear-gradient(180deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.08) 100%);
+  --btn-border: rgba(255,255,255,0.25);
+  --btn-text: #ffffff;
+  --btn-hover-shadow: 0 12px 24px rgba(0,0,0,0.35);
+
+  /* Iconography */
+  --icon-filter: drop-shadow(0 1px 2px rgba(0,0,0,.45));
+  --icon-color: #f3f4f6;
+  --icon-muted: #c8c8c8;
+  --icon-sun-active: #f1c40f;
+  --icon-moon-active: #9bb5ff;
+  --icon-inactive-opacity: .55;
+
+  /* Toggles */
+  --toggle-track-bg: linear-gradient(180deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.12) 100%);
+  --toggle-track-border: rgba(255,255,255,0.25);
+  --toggle-knob-bg: #fdfdfd;
+}
+
+body{
+  font-family: var(--font-family);
+}
