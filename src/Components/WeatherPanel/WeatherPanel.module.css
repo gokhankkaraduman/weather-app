@@ -1,0 +1,82 @@
+.weatherPanel{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    padding:28px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-card);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    color: var(--text-primary);
+}
+
+.detailsSection{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.detailRow{
+    display:grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap:16px;
+}
+.detailItemFull{ grid-column: 1 / -1; }
+
+.detailItem{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    padding:18px;
+    border-radius:16px;
+    background: var(--glass-bg-strong);
+    border: 1px solid var(--glass-border);
+}
+
+.citySection{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+}
+
+.cityName{
+    font-size: 2.25rem;
+    font-weight: 900;
+}
+
+.temperature{
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+.description{
+    opacity: 0.9;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+/* Weather icons inside this panel inherit theme filter */
+.weatherPanel img{ filter: var(--icon-filter); }
+
+.detailTitle{ font-size:1rem; font-weight:800; opacity:.85; }
+
+.detailValue{
+    font-size: 1.15rem;
+    font-weight: 900;
+}
+
+/* make Visibility appear slightly higher by reducing its padding */
+.detailItem:nth-child(1) .detailValue{ transform: translateY(-2px); }
+
+@media (max-width: 576px){
+  .detailRow{ grid-template-columns: 1fr; }
+}
+
+/* Wind composite styles (taken from forecast and adapted) */
+.windStats{ display:grid; grid-template-columns: 1fr 120px; gap:12px; align-items:center; }
+.windNumbers{ display:flex; gap:24px; }
+.compass{ display:flex; align-items:center; justify-content:center; }
+.compassDial{ position: relative; width: 100px; height:100px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.3); }
+.needle{ position:absolute; width:2px; height:44px; background: var(--color-accent-yellow); top:6px; left: calc(50% - 1px); transform-origin: bottom center; border-radius: 2px; }
