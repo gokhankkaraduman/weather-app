@@ -36,3 +36,67 @@
 .suggestionItem{ padding: 10px 12px; color: var(--text-primary); font-weight: 700; cursor: pointer; }
 .suggestionItem:hover{ background: var(--glass-bg-strong); }
 
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .inputContainer {
+    padding: 6px 6px 6px 12px;
+    gap: 6px;
+  }
+  
+  .input {
+    font-size: 0.85rem;
+  }
+  
+  .clearBtn, .submitBtn {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .suggestionItem {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .inputContainer {
+    padding: 4px 4px 4px 8px;
+    gap: 4px;
+  }
+  
+  .input {
+    font-size: 0.8rem;
+  }
+  
+  .clearBtn, .submitBtn {
+    width: 26px;
+    height: 26px;
+  }
+  
+  .suggestionItem {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .inputContainer {
+    padding: 3px 3px 3px 6px !important;
+    gap: 3px !important;
+  }
+  
+  .input {
+    font-size: 0.75rem !important;
+  }
+  
+  .clearBtn, .submitBtn {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  
+  .suggestionItem {
+    padding: 6px 8px !important;
+    font-size: 0.75rem !important;
+  }
+}
+

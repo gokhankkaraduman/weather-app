@@ -1,8 +1,8 @@
 .weatherPanel{
     display:flex;
     flex-direction:column;
-    gap:20px;
-    padding:28px;
+    gap: 12px;
+    padding: 20px;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-card);
@@ -14,22 +14,22 @@
 .detailsSection{
     display:flex;
     flex-direction:column;
-    gap:16px;
+    gap: 12px;
 }
 
 .detailRow{
     display:grid;
-    grid-template-columns: repeat(2, minmax(0,1fr));
-    gap:16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
 }
 .detailItemFull{ grid-column: 1 / -1; }
 
 .detailItem{
     display:flex;
     flex-direction:column;
-    gap:6px;
-    padding:18px;
-    border-radius:16px;
+    gap: 4px;
+    padding: 14px;
+    border-radius: 14px;
     background: var(--glass-bg-strong);
     border: 1px solid var(--glass-border);
 }
@@ -38,16 +38,16 @@
     display:flex;
     flex-direction:column;
     align-items:center;
-    gap:8px;
+    gap:6px;
 }
 
 .cityName{
-    font-size: 2.25rem;
+    font-size: 1.75rem;
     font-weight: 900;
 }
 
 .temperature{
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 900;
 }
 
@@ -60,7 +60,11 @@
 /* Weather icons inside this panel inherit theme filter */
 .weatherPanel img{ filter: var(--icon-filter); }
 
-.detailTitle{ font-size:1rem; font-weight:800; opacity:.85; }
+.detailTitle{ 
+    font-size: 1rem; 
+    font-weight:800; 
+    opacity:.85; 
+}
 
 .detailValue{
     font-size: 1.15rem;
@@ -75,8 +79,208 @@
 }
 
 /* Wind composite styles (taken from forecast and adapted) */
-.windStats{ display:grid; grid-template-columns: 1fr 120px; gap:12px; align-items:center; }
-.windNumbers{ display:flex; gap:24px; }
+.windStats{ 
+    display:grid; 
+    grid-template-columns: 1fr 120px; 
+    gap: 12px; 
+    align-items:center; 
+}
+.windNumbers{ 
+    display:flex; 
+    gap: 24px; 
+}
 .compass{ display:flex; align-items:center; justify-content:center; }
-.compassDial{ position: relative; width: 100px; height:100px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.3); }
-.needle{ position:absolute; width:2px; height:44px; background: var(--color-accent-yellow); top:6px; left: calc(50% - 1px); transform-origin: bottom center; border-radius: 2px; }
+.compassDial{ 
+    position: relative; 
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    border: 2px solid rgba(255,255,255,0.3); 
+}
+.needle{ 
+    position:absolute; 
+    width:2px; 
+    height: 44px; 
+    background: var(--color-accent-yellow); 
+    top: 6px; 
+    left: calc(50% - 1px); 
+    transform-origin: bottom center; 
+    border-radius: 2px; 
+}
+
+/* Tablet Responsive */
+@media screen and (max-width: 768px) {
+  .weatherPanel {
+    padding: 16px !important;
+    gap: 10px !important;
+  }
+  
+  .cityName {
+    font-size: 1.5rem !important;
+  }
+  
+  .temperature {
+    font-size: 2rem !important;
+  }
+  
+  .detailItem {
+    padding: 12px !important;
+  }
+  
+  .detailValue {
+    font-size: 1rem !important;
+  }
+  
+  .detailRow {
+    gap: 12px !important;
+  }
+  
+  .windStats {
+    grid-template-columns: 1fr 90px !important;
+    gap: 10px !important;
+  }
+  
+  .compassDial {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  
+  .needle {
+    height: 36px !important;
+    top: 4px !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .detailRow { 
+    grid-template-columns: 1fr !important; 
+    gap: 10px !important;
+  }
+  
+  .windStats {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    text-align: center !important;
+  }
+  
+  .windNumbers {
+    justify-content: center !important;
+    gap: 16px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .weatherPanel {
+    padding: 12px !important;
+    gap: 6px !important;
+  }
+  
+  .cityName {
+    font-size: 1.1rem !important;
+  }
+  
+  .temperature {
+    font-size: 1.4rem !important;
+  }
+  
+  .description {
+    font-size: 0.8rem !important;
+  }
+  
+  .detailItem {
+    padding: 8px !important;
+  }
+  
+  .detailTitle {
+    font-size: 0.8rem !important;
+  }
+  
+  .detailValue {
+    font-size: 0.85rem !important;
+  }
+  
+  .compassDial {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  
+  .needle {
+    height: 24px !important;
+    top: 2px !important;
+  }
+  
+  .windNumbers {
+    gap: 12px !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .weatherPanel {
+    padding: 6px !important;
+    gap: 2px !important;
+  }
+  
+  .cityName {
+    font-size: 0.9rem !important;
+    margin-bottom: 2px !important;
+  }
+  
+  .temperature {
+    font-size: 1.1rem !important;
+    margin-bottom: 2px !important;
+  }
+  
+  .description {
+    font-size: 0.65rem !important;
+    margin-bottom: 4px !important;
+  }
+  
+  .detailItem {
+    padding: 4px !important;
+    min-height: auto !important;
+  }
+  
+  .detailTitle {
+    font-size: 0.65rem !important;
+    margin-bottom: 2px !important;
+  }
+  
+  .detailValue {
+    font-size: 0.7rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  .detailRow {
+    grid-template-columns: 1fr !important;
+    gap: 4px !important;
+  }
+  
+  .windStats {
+    grid-template-columns: 1fr !important;
+    gap: 4px !important;
+    text-align: center !important;
+    padding: 4px !important;
+  }
+  
+  .windNumbers {
+    justify-content: center !important;
+    gap: 6px !important;
+    flex-wrap: wrap !important;
+  }
+  
+  .windNumbers > div {
+    font-size: 0.65rem !important;
+  }
+  
+  .compassDial {
+    width: 32px !important;
+    height: 32px !important;
+    margin: 0 auto !important;
+  }
+  
+  .needle {
+    height: 14px !important;
+    top: 1px !important;
+    width: 1px !important;
+  }
+}

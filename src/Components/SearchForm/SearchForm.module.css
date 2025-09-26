@@ -5,3 +5,34 @@
 }
 .title{ color: var(--text-primary); font-size: 1.25rem; font-weight: 900; opacity:.95; }
 
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .searchForm {
+    gap: 8px;
+  }
+  
+  .title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .searchForm {
+    gap: 6px;
+  }
+  
+  .title {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .searchForm {
+    gap: 4px !important;
+  }
+  
+  .title {
+    font-size: 0.8rem !important;
+  }
+}
+
