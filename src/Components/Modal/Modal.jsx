@@ -10,12 +10,17 @@ export default function Modal({ isOpen, onClose, title, children }) {
 
     if (isOpen) {
       document.addEventListener('keydown', handleEscape);
+      // Daha agresif scroll engelleme
       document.body.style.overflow = 'hidden';
+      document.body.style.height = '100%';
+      document.documentElement.style.overflow = 'hidden';
     }
 
     return () => {
       document.removeEventListener('keydown', handleEscape);
       document.body.style.overflow = '';
+      document.body.style.height = '';
+      document.documentElement.style.overflow = '';
     };
   }, [isOpen, onClose]);
 

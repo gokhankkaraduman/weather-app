@@ -36,16 +36,21 @@ img {
     height: auto;
 }
 
-/* Fix scroll issues */
-html, body{
+/* Fix scroll issues completely */
+html{
     height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden;
+}
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 #root{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 body{
     background: var(--bg-light);
@@ -55,11 +60,8 @@ body{
 
 /* Mobile viewport adjustments */
 @media (max-width: 768px) {
-  html, body {
-    min-height: 100dvh; /* Dynamic viewport height for mobile */
-  }
   #root {
-    min-height: 100dvh;
+    height: 100dvh; /* Dynamic viewport height for mobile */
   }
 }
 
