@@ -6,14 +6,6 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "devCommand": "npm run dev",
-  "env": {
-    "VITE_OPENWEATHER_API_KEY": "@openweather_api_key"
-  },
-  "build": {
-    "env": {
-      "VITE_OPENWEATHER_API_KEY": "@openweather_api_key"
-    }
-  },
   "functions": {
     "app/api/**/*.js": {
       "runtime": "nodejs18.x"
