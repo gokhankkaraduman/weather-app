@@ -3,6 +3,7 @@ import './App.css';
 import Header from '../Header/Header';
 import Home from '../../pages/Home/Home';
 import Background from '../Background/Background.jsx';
+import Footer from '../Footer/Footer';
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
@@ -19,6 +20,7 @@ function App() {
     <div className="App">
       <Header unit={unit} onToggleUnit={() => setUnit(prev => prev === 'metric' ? 'imperial' : 'metric')} />
       <Home setWeatherData={setWeatherData} weatherData={weatherData} unit={unit} />
+      <Footer />
       <Background weatherId={weatherData?.weather[0]?.id || 800} />
     </div>
   );
