@@ -56,7 +56,7 @@ A modern, responsive weather application built with React and Vite, featuring re
    
    Add your OpenWeatherMap API key to `.env`:
    ```env
-   VITE_OPENWEATHER_API_KEY=your_api_key_here
+   VITE_API_KEY=your_api_key_here
    ```
 
 4. **Start development server**
