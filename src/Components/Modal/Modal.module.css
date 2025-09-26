@@ -1,15 +1,19 @@
 .overlay{
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 9999;
   padding: 20px;
   animation: fadeIn 0.2s ease;
+  overflow: hidden;
 }
 
 :root[data-theme="dark"] .overlay{
@@ -25,11 +29,13 @@
   box-shadow: 0 24px 48px rgba(0,0,0,0.3);
   max-width: 900px;
   width: 95%;
-  max-height: 90vh;
+  height: 80vh;
+  max-height: 80vh;
   overflow: hidden;
   animation: slideUp 0.3s ease;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .header{

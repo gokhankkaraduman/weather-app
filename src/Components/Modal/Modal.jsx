@@ -10,18 +10,25 @@ export default function Modal({ isOpen, onClose, title, children }) {
 
     if (isOpen) {
       document.addEventListener('keydown', handleEscape);
-      // Daha agresif scroll engelleme
+      
+      // Scroll'u tamamen engelle
+      const scrollY = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = '100%';
       document.body.style.overflow = 'hidden';
-      document.body.style.height = '100%';
       document.documentElement.style.overflow = 'hidden';
+      
+      return () => {
+        document.removeEventListener('keydown', handleEscape);
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
+        window.scrollTo(0, scrollY);
+      };
     }
-
-    return () => {
-      document.removeEventListener('keydown', handleEscape);
-      document.body.style.overflow = '';
-      document.body.style.height = '';
-      document.documentElement.style.overflow = '';
-    };
   }, [isOpen, onClose]);
 
   if (!isOpen) return null;
