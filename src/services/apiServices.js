@@ -1,7 +1,12 @@
 import axios from "axios";
 
-const API_KEY = import.meta.env.VITE_API_KEY;
-const BASE_URL = import.meta.env.VITE_BASE_URL; // https://api.openweathermap.org/data/2.5
+const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
+const BASE_URL = "https://api.openweathermap.org/data/2.5";
+
+// API Key kontrolü
+if (!API_KEY) {
+  console.error('VITE_OPENWEATHER_API_KEY environment variable is not set');
+}
 
 // Weather by city or coordinates
 export const getWeatherByParams = async ({ city, lat, lon }) => {

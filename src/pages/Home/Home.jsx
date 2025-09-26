@@ -17,7 +17,10 @@ export default function Home({ setWeatherData,  weatherData, unit }) {
     const fetchLocationWeather = async () => {
       try {
         const position = await getLocation();
-        if (!position) return;
+        if (!position || !position.coords) {
+          console.warn('Position or coords not available');
+          return;
+        }
 
         const { latitude, longitude } = position.coords;
 

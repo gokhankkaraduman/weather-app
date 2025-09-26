@@ -8,10 +8,21 @@ export default function getLocation() {
 
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        resolve(position); // Position objesi dönüyor
+        // Position ve coords kontrolü
+        if (position && position.coords) {
+          resolve(position);
+        } else {
+          reject(new Error('Invalid position data received'));
+        }
       },
       (error) => {
+        console.error('Geolocation error:', error);
         reject(error);
+      },
+      {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 300000 // 5 dakika cache
       }
     );
   });
