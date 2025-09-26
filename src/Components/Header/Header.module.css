@@ -2,13 +2,14 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 24px;
+    padding: 12px 20px;
     background: var(--glass-bg);
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
     border: 1px solid var(--glass-border);
-    border-radius: 18px;
-    box-shadow: 0 16px 32px rgba(0,0,0,0.18);
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    flex-shrink: 0;
 }
 .logoContainer{
     display:flex;
@@ -18,12 +19,12 @@
 }
 .logo{
     background: transparent;
-    width: 72px;
-    height: 72px;
+    width: 56px;
+    height: 56px;
 }
 .title{
     color: var(--text-primary);
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 900;
 }
 .navlinks{
@@ -166,4 +167,198 @@
 .unitToggle.unitImperial .unitF{ opacity: 1; }
 .unitToggle:not(.unitImperial) .unitC{ color: var(--unit-c-active); }
 .unitToggle.unitImperial .unitF{ color: var(--unit-f-active); }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 16px;
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .logoContainer {
+        order: 1;
+    }
+    
+    .buttons {
+        order: 2;
+        gap: 16px;
+    }
+    
+    .logo {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .title {
+        font-size: 1.2rem;
+    }
+    
+    .togglebutton {
+        width: 96px;
+        height: 44px;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+    
+    .knob {
+        width: 30px;
+        height: 30px;
+        left: 7px;
+    }
+    
+    .toggled .knob {
+        left: 59px;
+    }
+    
+    .sun, .moon {
+        font-size: 22px;
+    }
+    
+    .unitToggle {
+        width: 130px;
+        height: 44px;
+        padding: 0 14px;
+    }
+    
+    .unitKnob {
+        width: 60px;
+        height: 30px;
+        left: 5px;
+    }
+    
+    .unitImperial .unitKnob {
+        left: 65px;
+    }
+    
+    .unitC, .unitF {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 8px 12px;
+        gap: 12px;
+    }
+    
+    .logoContainer {
+        gap: 8px;
+    }
+    
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .title {
+        font-size: 1.1rem;
+    }
+    
+    .buttons {
+        gap: 12px;
+    }
+    
+    .togglebutton {
+        width: 80px;
+        height: 38px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    
+    .knob {
+        width: 26px;
+        height: 26px;
+        left: 6px;
+    }
+    
+    .toggled .knob {
+        left: 48px;
+    }
+    
+    .sun, .moon {
+        font-size: 18px;
+    }
+    
+    .unitToggle {
+        width: 110px;
+        height: 38px;
+        padding: 0 12px;
+    }
+    
+    .unitKnob {
+        width: 50px;
+        height: 26px;
+        left: 4px;
+    }
+    
+    .unitImperial .unitKnob {
+        left: 56px;
+    }
+    
+    .unitC, .unitF {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 425px) {
+    .header {
+        padding: 6px 10px !important;
+        gap: 10px !important;
+    }
+    
+    .logo {
+        width: 32px !important;
+        height: 32px !important;
+    }
+    
+    .title {
+        font-size: 0.9rem !important;
+    }
+    
+    .buttons {
+        gap: 8px !important;
+    }
+    
+    .togglebutton {
+        width: 70px !important;
+        height: 32px !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+    
+    .knob {
+        width: 22px !important;
+        height: 22px !important;
+        left: 5px !important;
+    }
+    
+    .toggled .knob {
+        left: 43px !important;
+    }
+    
+    .sun, .moon {
+        font-size: 14px !important;
+    }
+    
+    .unitToggle {
+        width: 100px !important;
+        height: 32px !important;
+        padding: 0 8px !important;
+    }
+    
+    .unitKnob {
+        width: 42px !important;
+        height: 22px !important;
+        left: 3px !important;
+    }
+    
+    .unitImperial .unitKnob {
+        left: 49px !important;
+    }
+    
+    .unitC, .unitF {
+        font-size: 14px !important;
+    }
+}
 

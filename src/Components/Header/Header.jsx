@@ -1,5 +1,4 @@
 import style from './Header.module.css';
-import { NavLink } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 import { useEffect, useState } from 'react';
 import { LuSunMedium, LuMoonStar } from 'react-icons/lu';
@@ -32,13 +31,7 @@ export default function Header({ unit = 'metric', onToggleUnit }) {
             <img className={style.logo} src={logo} alt="Weather App Logo" />
             <h2 className={style.title}>Cloud Peek</h2>
         </div>
-        <nav className={style.navbar}>
-            <ul className={style.navlinks}>
-                <NavLink className={style.navlink} to="/">Home</NavLink>
-                <NavLink className={style.navlink} to="/search">Search</NavLink>
-                <NavLink className={style.navlink} to="/contact">Contact</NavLink>
-            </ul>
-        </nav>
+        <div></div>
         <div className={style.buttons}>
             <button aria-label="Toggle theme" className={`${style.togglebutton} ${theme === 'dark' ? style.toggled : style.untoggled}`} onClick={toggleTheme}>
               <span className={style.knob} />
