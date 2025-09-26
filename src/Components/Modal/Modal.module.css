@@ -25,7 +25,7 @@
   box-shadow: 0 24px 48px rgba(0,0,0,0.3);
   max-width: 900px;
   width: 95%;
-  height: 85vh;
+  max-height: 90vh;
   overflow: hidden;
   animation: slideUp 0.3s ease;
   display: flex;

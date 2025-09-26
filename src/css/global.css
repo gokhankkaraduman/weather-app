@@ -36,9 +36,9 @@ img {
     height: auto;
 }
 
-/* Allow page scroll instead of component scroll */
+/* Fix scroll issues */
 html, body{
-    min-height: 100vh;
+    height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
 }

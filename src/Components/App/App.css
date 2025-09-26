@@ -5,6 +5,7 @@
   padding: 16px;
   gap: 16px;
   box-sizing: border-box;
+  overflow: visible;
 }
 
 /* Mobile responsive */
