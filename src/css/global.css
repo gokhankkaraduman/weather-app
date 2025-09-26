@@ -36,13 +36,39 @@ img {
     height: auto;
 }
 
-/* Prevent unnecessary scroll caused by fixed background */
-html, body, #root{
-    height: 100%;
+/* Allow page scroll instead of component scroll */
+html, body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#root{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 body{
-    overflow-x: hidden;
     background: var(--bg-light);
+    margin: 0;
+    padding: 0;
+}
+
+/* Mobile viewport adjustments */
+@media (max-width: 768px) {
+  html, body {
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
+  }
+  #root {
+    min-height: 100dvh;
+  }
+}
+
+/* Touch-friendly interactions on mobile */
+@media (hover: none) and (pointer: coarse) {
+  button, .clickable {
+    min-height: 44px; /* Minimum touch target size */
+    min-width: 44px;
+  }
 }
 
 address {
